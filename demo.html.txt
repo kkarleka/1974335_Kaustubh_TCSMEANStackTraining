@@ -1,0 +1,8 @@
+<html>
+<body>
+	<title> Welcome to MEANStack Training</title>
+	<h1>My First Class</h1>
+	<p>My first project</p>
+
+</body>
+</html>
