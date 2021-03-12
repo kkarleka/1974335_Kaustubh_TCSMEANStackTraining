@@ -1,0 +1,22 @@
+.shape{
+ width: 150px;
+ height: 150px;
+ border: 3px solid red; 
+ background-color:blue;
+ align-items: center;
+}
+
+.heading{
+    color:maroon;
+    text-align: center;
+    text-decoration:underline; 
+    line-height:40px; 
+    
+    }
+
+.red{
+    color:red;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow:3px 1px blue
+}
