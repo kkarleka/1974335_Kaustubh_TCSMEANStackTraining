@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Teambudget.css">
+    <script src="TeamBudgetPlanner.js"></script>
+</head>
+<body>
+    <h2 style = "text-align: center;">Program Managers</h2>
+    <div class = "manager-page">
+        <form>
+            <label>Client Name</label>
+            <input type="text" class = "textbox" id="name"  style="width: 200px;"/><br/><br/>
+            <label>Project Name</label>
+            <input type="text"  class = "textbox" id="name1" style ="width: 200px;"/><br/><br/>
+            <label>Budget</label>
+            <input type="number"  class = "textbox" id="exp" style ="width: 200px;"/><br/><br/>
+            <input type="button" value="Add" onclick="readFormData()"/>
+            <input type="button" value="Clear" onclick="resetData()"/><br/><br/>
+           
+           
+            <input type="button" value="Retrive from session" onclick="retrieveFromSession()"/><br/> 
+            <hr/>
+            <a href="TeamBudgetPlanner.html" style="font-size: 15px;">Back</a><br/>
+        </form>
+        <br/>
+    </div>
+</body>
+</html>
