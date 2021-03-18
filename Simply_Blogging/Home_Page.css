@@ -1,0 +1,48 @@
+.hyper {
+    float: right;
+    margin-right: 20px;
+}
+
+.body{
+    background-color: skyblue;
+}
+
+.title{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.discription{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.file{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.button{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#title {
+    margin-left: 60px;
+}
+
+#desc {
+    margin-left: 10px;
+}
+
+#innerdiv {
+    border: 5px solid black;
+    border-style: double;
+    margin-left: 50px;
+    width: 50%;
+}
+
+.imageInfo{
+    height: 50%;
+    width: 50%;
+}
