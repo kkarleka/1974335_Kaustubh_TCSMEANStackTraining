@@ -1,0 +1,141 @@
+{"questions" : [
+    {   
+        "questionId" : 1,
+        "question" : "1. Is JavaScript a case-sensitive language?",
+        "options"  : 
+                    [
+                        "True",
+                        "False"
+                        
+                    ],
+        "answer" : "True",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 2,
+        "question" : "2. Which built-in method combines the text of two strings and returns a new string?",
+         "options"  : 
+                    [
+                        "append()",
+                        "concat()",
+                        "attach()",
+                        "None of the above"
+                    ],
+        "answer" : "concat()",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 3,
+        "question" : "3. Which of the following function of String object creates an HTML hypertext link that requests another URL?",
+        "options"  : 
+                    [
+                        "link()",
+                        "sub()",
+                        "sup()",
+                        "small()"
+                    ],
+        "answer" : "link()",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 4,
+        "question" : "4. Which one of the following also known as Conditional Expression:",
+         "options"  : 
+                    [
+                        "Alternative to if-else",
+                        "Switch statement",
+                        "If-then-else statement",
+                        "immediate if"
+                    ],
+        "answer" : "immediate if",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 5,
+        "question" : "5. The function and var are known as : ",
+         "options"  : 
+                    [
+                        "Keywords",
+                        "Data types",
+                        "Declaration statements",
+                        "Prototypes"
+                    ],
+        "answer" : "Declaration statements",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 6,
+        "question" : "6.  Which of the following variables takes precedence over the others if the names are the same?",
+         "options"  : 
+                    [
+                        "Global variable",
+                        "The local element",
+                        "Both",
+                        "None of the above"
+                    ],
+        "answer" : "The local element",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 7,
+        "question" : "7. Which one of the following is the correct way for calling the JavaScript code?",
+         "options"  : 
+                    [
+                        "Preprocessor",
+                        "Triggering Event",
+                        "RMI",
+                        "Function/Method"
+                    ],
+        "answer" : "Function/Method",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 8,
+        "question" : "8. Choose the correct snippet from the following to check if the variable a is not equal the NULL:",
+         "options"  : 
+                    [
+                        "if(a!==null)",
+                        "if (a!)",
+                        "if(a!null)",
+                        "if(a!=null)"
+                    ],
+        "answer" : "if(a!==null)",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 9,
+        "question" : "9. Which one of the following is used for the calling a function or a method in the JavaScript:",
+         "options"  : 
+                    [
+                        "Property Access Expression",
+                        "Functional expression",
+                        "Invocation expression",
+                        "Primary expression"
+                    ],
+        "answer" : "Invocation expression",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    },
+    {
+        "questionId" : 10,
+        "question" : "10. Which one of the following is an ternary operator:?",
+         "options"  : 
+                    [
+                        "?",
+                        ":",
+                        "-",
+                        "+"
+                    ],
+        "answer" : "?",
+        "selectedAnswer" : false,
+        "userAnswered" : ""
+    }
+]}

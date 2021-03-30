@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz</title>
+</head>
+<body style="background-color:aquamarine">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+  <div class="container-fluid">
+    <h1> Javascript Assessment</h1>
+    <div class="jumbotron p-5">
+        <div *ngFor = "let item of quizQuestionsInfo;let j = index"> 
+              <div class="">
+                <label class="control-label font-weight-bolder pt-3">{{item.question}}</label>
+             
+              <div *ngFor='let op of item.options;let i = index'>
+                <div class="form-check">
+                  <input type="radio" id="answeroptions{{j}}{{i}}" name="quizanswers{{j}}" value="{{op}}"
+                  class="form-check-input" formControlName = "quizanswers{{j}}">
+                  <label for="lbl_options" class="form-check-label pl-3">{{op}}</label>
+                </div>
+              </div>
+             </div>
+             <div *ngIf="isFormValid && isReview">
+               <div *ngIf= "item.selectedAnswer; else incorrect">
+                  <strong class="text-success">Correct</strong>
+               </div>
+               <ng-template #incorrect>
+                  <div><strong class="text-danger">Incorrect</strong></div>
+              </ng-template>
+                <div class="text-success">Answer: <strong>{{item.answer}}</strong> </div>
+              </div>
+             
+
+      </div>
+
+      <div *ngIf="isFormSubmitted && f.quizanswers0.invalid" class="alert alert-danger">
+        <div *ngIf="f.quizanswers0.errors.required">Question1 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers1.invalid" class="alert alert-danger">
+        <div *ngIf="f.quizanswers1.errors.required">Question2 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers2.invalid" class="alert alert-danger">
+        <div *ngIf="f.quizanswers2.errors.required">Question3 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers3.invalid;" class="alert alert-danger">
+        <div *ngIf="f.quizanswers3.errors.required">Question4 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers4.invalid;" class="alert alert-danger">
+        <div *ngIf="f.quizanswers4.errors.required">Question5 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers5.invalid;" class="alert alert-danger">
+        <div *ngIf="f.quizanswers5.errors.required">Question6 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers6.invalid;" class="alert alert-danger">
+        <div *ngIf="f.quizanswers6.errors.required">Question7 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers7.invalid;" class="alert alert-danger">
+        <div *ngIf="f.quizanswers7.errors.required">Question8 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers8.invalid;" class="alert alert-danger">
+        <div *ngIf="f.quizanswers8.errors.required">Question9 is required.</div>
+      </div>
+      <div *ngIf="isFormSubmitted && f.quizanswers9.invalid; else isLoogedOut" class="alert alert-danger">
+        <div *ngIf="f.quizanswers9.errors.required">Question10 is required.</div>
+      </div>
+    <ng-template #isLoogedOut>
+      <div style="color: green;" class="offset-5 pt-3"><strong>{{msg}}</strong></div>    
+    </ng-template>
+    <div *ngIf="isFormValid && isReview" class="offset-3">
+      Number of correct answers : <span class="text-success pr-5">{{correctAnswers}} </span>
+      Number of incorrect answers : <span class="text-danger"> {{inCorrectAnswers}} </span>
+    </div>  
+  </div>
+    <input value="Submit" class="btn btn-primary offset-6" type="submit">
+    <span class="btn btn-danger ml-3"> <a routerLink="/">End Quiz </a></span>
+    <div *ngIf="isFormValid" class="pt-3">
+      <input type="button" class="btn btn-success offset-6" value="Review" (click) = "reviewAnswers()">
+    </div>
+    
+  </div>
+</form>
+</body>
+</html>
