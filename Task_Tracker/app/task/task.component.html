@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+<body style="background-color: cornflowerblue;">
+    <div style="margin: 20px;">
+        
+        <h1 style= "text-align:center"><u>Task Tracker</u></h1>
+        <hr>
+        <form #pForm="ngForm" (ngSubmit)="storeData(pForm.value)">
+            <div class="form-group">
+                <mat-form-field>
+                <mat-label for="id">ID</mat-label>
+                <input matInput type="text" class="form-control" name ="id" placeholder="ID" ngModel required>
+               </mat-form-field>
+                
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                <mat-label for="name">Name</mat-label>
+                <input matInput type="text" class="form-control" name ="name" placeholder="Name" ngModel required>
+                </mat-form-field>
+                
+            </div>
+            <div class="form-group">
+                <label for="task">Task</label>
+                <input matInput type="text" class="form-control" name ="task" placeholder="Task" ngModel required>
+            </div>
+            <div class="form-group">
+                <mat-form-field>
+                <mat-label for="dl">Deadline</mat-label>
+                <input matInput type="text" class="form-control" name ="dl" placeholder="Deadline" ngModel required>
+                </mat-form-field>
+                
+            </div>
+            <div>
+            <button mat-stroked-button color="primary" 
+            style="background-color:chocolate;" type="submit"><b>Save</b></button>
+            <button mat-stroked-button color="primary" 
+            style="background-color:grey;" type="reset"><b>Reset</b></button>
+               
+            </div>
+
+            <div *ngIf="hasData">
+                <table class="table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of trackers">
+                            <td>{{item.id}}</td>
+                            <td> {{item.name}}   </td>
+                            <td> {{item.task}}   </td>
+                            <td> {{item.dl}}   </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
