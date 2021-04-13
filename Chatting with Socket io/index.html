@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+    var socket = io();
+        function fun(){
+            var obj = {}    
+            obj.name1 = document.getElementById("name").value;
+            obj.msg1 = document.getElementById("msg").value;
+            socket.emit("chat","Hello"+ " "  + obj.name1 + "," + "\r\n" + obj.msg1)
+
+        }
+    </script>
+</head>
+<body style="background-color:grey;">
+    <h2>Enter your Message here..!!</h2>
+<form>
+    <label>Name</label>
+    <input type="text" id="name"/><br/><br/>
+    <label>Message</label>
+    <textarea type="text" id="msg"></textarea><br/><br/>
+    <input type="button" value="Enter" onclick="fun()"/>
+</form>
+</body>
+</html>
